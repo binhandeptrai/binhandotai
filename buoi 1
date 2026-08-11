@@ -1,0 +1,156 @@
+<?php
+$name = "Vũ Thái Bình An";
+$job = "Sinh viên / Web Developer";
+$description = "Xin chào! Mình là Vũ Thái Bình An . Mình yêu thích lập trình web và đang học tập, phát triển các kỹ năng về PHP, HTML, CSS và JavaScript.";
+?>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Me - <?php echo $name; ?></title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about {
+            width: 90%;
+            max-width: 700px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .avatar {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #667eea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .job {
+            color: #667eea;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .skills {
+            margin-bottom: 30px;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #eef0ff;
+            color: #667eea;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .contact a {
+            display: inline-block;
+            text-decoration: none;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .contact a:hover {
+            background: #4c5fd5;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="about">
+
+        <!-- Avatar -->
+        <div class="avatar">
+            <?php echo strtoupper(substr($name, 0, 1)); ?>
+        </div>
+
+        <!-- Tên -->
+        <h1>
+            <?php echo $name; ?>
+        </h1>
+
+        <!-- Nghề nghiệp -->
+        <p class="job">
+            <?php echo $job; ?>
+        </p>
+
+        <!-- Giới thiệu -->
+        <p class="description">
+            <?php echo $description; ?>
+        </p>
+
+        <!-- Kỹ năng -->
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>PHP</span>
+            <span>JavaScript</span>
+            <span>MySQL</span>
+        </div>
+
+        <!-- Liên hệ -->
+        <div class="contact">
+            <a href="mailto:example@gmail.com">
+                Email
+            </a>
+
+            <a href="https://github.com/" target="_blank">
+                GitHub
+            </a>
+
+            <a href="https://facebook.com/" target="_blank">
+                Facebook
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
